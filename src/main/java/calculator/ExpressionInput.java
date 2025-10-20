@@ -14,6 +14,10 @@ public class ExpressionInput {
         return delimiters;
     }
 
+    public String getDelimitersString() {
+        return delimiters.toString();
+    }
+
     public String getExpression() {
         return expression;
     }
