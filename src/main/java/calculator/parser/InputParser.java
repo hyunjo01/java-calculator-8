@@ -1,6 +1,7 @@
 package calculator.parser;
 
 import calculator.ExpressionInput;
+import calculator.Operands;
 
 public class InputParser {
 
@@ -13,11 +14,11 @@ public class InputParser {
         expressionTokenizer = new ExpressionTokenizer();
     }
 
-    public void parseToNumbers(String inputString) {
-
+    public Operands parseToOperands(String inputString) {
         ExpressionInput expressionInput = customDelimiterParser.parseToExpressionInput(inputString);
         String[] tokens = expressionTokenizer.tokenize(expressionInput);
-
+        Operands operands = new Operands(tokens);
+        return operands;
     }
 
 }

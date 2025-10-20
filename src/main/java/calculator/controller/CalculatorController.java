@@ -15,7 +15,7 @@ public class CalculatorController {
 
     public void run() {
         String inputString = inputView.view();
-        inputParser.parseToNumbers(inputString);
+        inputParser.parseToOperands(inputString);
     }
 
 }
