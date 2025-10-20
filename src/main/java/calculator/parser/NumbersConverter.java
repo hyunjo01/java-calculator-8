@@ -13,7 +13,7 @@ public class NumbersConverter {
         Numbers numbers = new Numbers();
         for (String token: tokens) {
             if (token.matches(OPERAND_EMPTY_REGEX)) continue;
-            numbers.addOperand(covert(token));
+            numbers.addNumber(covert(token));
         }
         return numbers;
     }

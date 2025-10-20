@@ -1,5 +1,6 @@
 package calculator.controller;
 
+import calculator.Numbers;
 import calculator.parser.InputParser;
 import calculator.view.InputView;
 
@@ -15,7 +16,9 @@ public class CalculatorController {
 
     public void run() {
         String inputString = inputView.view();
-        inputParser.parseToOperands(inputString);
+        Numbers numbers = inputParser.parseToOperands(inputString);
+        Long result = numbers.calculateSum();
+        System.out.println(result);
     }
 
 }
